@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_judyln.mk
+    $(LOCAL_DIR)/omni_caymanslm.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_judyln-userdebug \
-    omni_judyln-eng
+    omni_caymanslm-userdebug \
+    omni_caymanslm-eng

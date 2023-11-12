@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/lge/judyln
+DEVICE_PATH := device/lge/caymanslm
 
 # Platform
 TARGET_ARCH := arm64
@@ -58,7 +58,7 @@ BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += androidboot.hardware=judyln
+BOARD_KERNEL_CMDLINE += androidboot.hardware=caymanslm
 BOARD_KERNEL_CMDLINE += disable_skip_initramfs
 BOARD_KERNEL_CMDLINE += skip_override androidboot.fastboot=1
 TARGET_KERNEL_ARCH := arm64
@@ -70,7 +70,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 #TARGET_KERNEL_CONFIG := lineageos_judyln_defconfig
 
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel-dtb
 BOARD_MKBOOTIMG_ARGS := --header_version 1
 
 # Platform
@@ -94,8 +94,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_NO_KERNEL := false
 TARGET_NO_RECOVERY := false
-BOARD_USES_RECOVERY_AS_BOOT := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := false
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
