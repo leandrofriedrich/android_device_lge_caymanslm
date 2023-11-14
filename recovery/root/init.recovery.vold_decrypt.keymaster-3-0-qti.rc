@@ -10,8 +10,8 @@
 service ven_keymaster-3-0-qti /sbin/android.hardware.keymaster@3.0-service-qti
     user root
     group root
-    setenv PATH /vendor/bin:/system_root/system/bin
-    setenv LD_LIBRARY_PATH /vendor/lib64:/system_root/system/lib64:/vendor/lib:/system_root/system/lib
+    setenv PATH /vendor/bin:/system/system/bin
+    setenv LD_LIBRARY_PATH /vendor/lib64:/system/system/lib64:/vendor/lib:/system/system/lib
     oneshot
     disabled
     seclabel u:r:recovery:s0

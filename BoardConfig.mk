@@ -145,6 +145,7 @@ TARGET_USES_MKE2FS := true
 # more partitions to this list for the bootloader and radio.
 AB_OTA_PARTITIONS += \
     boot \
+    recovery \
     system \
     vendor \
     vbmeta \
@@ -160,7 +161,7 @@ TARGET_HW_DISK_ENCRYPTION := false
 TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 #TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd keymaster-3-0-qti gatekeeper-1-0-qti hwservicemanager configstore-1-0
 TW_CRYPTO_USE_SYSTEM_VOLD := true
-TW_CRYPTO_SYSTEM_VOLD_MOUNT := system_root firmware OP
+TW_CRYPTO_SYSTEM_VOLD_MOUNT := system firmware OP
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TWRP_INCLUDE_LOGCAT := true
