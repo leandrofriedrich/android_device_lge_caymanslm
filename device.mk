@@ -5,8 +5,8 @@ LOCAL_PATH := device/lge/caymanslm
 PRODUCT_PLATFORM := sdm845
 
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/bootctrl \
-    $(LOCAL_PATH)/gpt-utils
+    $(LOCAL_PATH)/bootctrl #\
+#    $(LOCAL_PATH)/gpt-utils
 
 # A/B support
 PRODUCT_PACKAGES += \
@@ -25,11 +25,11 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Enable update engine sideloading by including the static version of the
 # boot_control HAL and its dependencies.
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.$(PRODUCT_PLATFORM) \
-    libgptutils \
-    libz \
-    libcutils
+#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+#    bootctrl.$(PRODUCT_PLATFORM) \
+#    libgptutils \
+#    libz \
+#    libcutils
 
 
 # Boot control HAL
@@ -37,3 +37,5 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
     hwservicemanager
+
+PRODUCT_USE_DYNAMIC_PARTITIONS := true

@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_caymanslm.mk
+    $(LOCAL_DIR)/twrp_caymanslm.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_caymanslm-userdebug \
-    omni_caymanslm-eng
+    twrp_caymanslm-userdebug \
+    twrp_caymanslm-eng

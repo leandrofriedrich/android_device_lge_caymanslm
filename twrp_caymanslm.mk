@@ -17,17 +17,25 @@
 # Release name
 PRODUCT_RELEASE_NAME := caymanslm
 
-$(call inherit-product, build/target/product/embedded.mk)
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+
+#$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+#$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/caymanslm/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := caymanslm
-PRODUCT_NAME := omni_caymanslm
+PRODUCT_NAME := twrp_caymanslm
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := LG Velvet
 PRODUCT_MANUFACTURER := LG
