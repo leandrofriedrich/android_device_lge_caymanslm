@@ -106,7 +106,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
-# TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 
 # Workaround for error copying vendor files to recovery ramdisk
